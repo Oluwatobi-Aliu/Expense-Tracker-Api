@@ -19,10 +19,6 @@ const UserSchema = new Schema({
     created: {
       type: Date,
       default: Date.now
-    },
-    educator: {
-      type: Boolean,
-      default: false
-    },
+    }
   })
 module.exports = model('User', UserSchema)

@@ -9,8 +9,7 @@ const config = require('./config')
 const dbConnect = require('./database')
 const authRoute = require('./routes/auth')
 const userRoute = require('./routes/user')
-const courseRoute = require('./routes/course')
-const enrollRoute = require('./routes/enroll')
+const expenseRoute = require('./routes/expense')
 // App Setup
 const app = express()
 app.set('port', config.port)
@@ -23,8 +22,7 @@ app.use(cors())
 // App Routes
 app.use('/api/auth', authRoute)
 app.use('/api/users', userRoute)
-app.use('/api/courses', courseRoute)
-app.use('api/enroll', enrollRoute)
+app.use('/api/expense', expenseRoute)
 
 
 // Catch unauthorised errors

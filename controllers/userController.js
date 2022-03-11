@@ -2,11 +2,12 @@ const bcrypt = require('bcryptjs')
 const { extend } = require('lodash')
 
 const User = require('../models/User')
+const config = require('../config')
 const errorHandler = require('../errhandler')
 
 const create = async (req, res) => {
   try {
-    req.body.password = await bcrypt.hash(req.body.password, 5)
+    req.body.password = await bcrypt.hash(req.body.password, config.hash_number)
     const user = new User(req.body)
     await user.save()
     return res.status(200).json({
@@ -77,17 +78,7 @@ const remove = async (req, res) => {
   }
 }
 
-const isEducator = (req, res, next) => {
-  const isEducator = req.profile && req.profile.educator
-  if (!isEducator) {
-    return res.status('403').json({
-      error: "User is not an educator"
-    })
-  }
-  next()
-}
-
 
 module.exports = {
-    create, read, userByID, list, update, remove, isEducator
+    create, read, userByID, list, update, remove, 
 }
