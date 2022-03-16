@@ -52,6 +52,7 @@ Room for improvement:
 To do:
 - Add more "Expense" endpoints for more specific queries
 - Add an *OAuth* authenication
+- Deploy on Heroku
 
 
 ## Acknowledgements
