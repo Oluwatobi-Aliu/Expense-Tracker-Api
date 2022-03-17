@@ -15,7 +15,7 @@
 
 ## General Information
 - This API provides CRUD functionality for tracking and managing expenses. Users can create an account, add, delete, update and view their expenses.
-- This API was built to help people like Afolabi and I track how we spend, so we can budget better.
+- This API was built to help people they spend, so we can budget better.
 
 
 ## Technologies Used
