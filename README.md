@@ -36,9 +36,6 @@
     $ npm start
     ```
 
-## Usage
-Here is the documentation using [Postman](https://documenter.getpostman.com/view/20050695/UVsMtk1u)
-
 ## Project Status
 Project is: _in progress_ 
 
